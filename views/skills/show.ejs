@@ -1,0 +1,14 @@
+<%- include('../partial-views/header') %>
+
+  <body>
+    <a href="/skills">TAKE ME BACK</a>
+    <h1><%= skill.yearInvented %></h1>
+    <a href="<%= skill.wikiLink %>">Wikipedia</a>
+    <br>
+    <a class="edit-skill" href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+    <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
+      <button type="submit">Delete Skill</button>
+    </form>
+  </body>
+
+<%- include('../partial-views/footer') %>

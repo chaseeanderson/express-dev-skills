@@ -1,0 +1,17 @@
+<%- include('../partial-views/header') %>
+
+    <body>
+      <h1>Dev Skills</h1>
+      <ul>
+        <% skills.forEach(function(s) { %>
+          <li>
+            <%= s.skill %> was invented in...
+      
+            <a href="/skills/<%= s.id %>">(click me!)</a>
+          </li>
+        <% }); %>
+      </ul>
+      <a href="/skills/new">Add a Skill</a>
+    </body>
+
+<%- include('../partial-views/footer') %>
